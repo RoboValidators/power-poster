@@ -10,7 +10,7 @@
 
 ## Installation
 
-#### Configuration required for path ~/.config/<nos | ark>-core/<network>/plugins.js
+#### Configuration required for path ~/.config/nos-core/network-name/plugins.js
 
 ```javascript
 module.exports = {
