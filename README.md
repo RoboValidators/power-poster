@@ -48,7 +48,7 @@ git clone https://github.com/RoboValidators/power-bot
 cd power-bot && yarn
 
 # Build the project
-yarn bild
+yarn build
 
 # Start the validator/relay
 ccontrol start relay | forger | core
