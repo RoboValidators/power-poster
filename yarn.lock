@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@arkecosystem/core-container@^2.6.49":
+"@arkecosystem/core-container@2.6.49":
   version "2.6.49"
   resolved "https://registry.yarnpkg.com/@arkecosystem/core-container/-/core-container-2.6.49.tgz#e5c5d9857ee200115fd0a5fcd085baec01f0ae7f"
   integrity sha512-U2MU0s27w+6H9n9kDlfBDmq42rwFi1TfPmFTsiU7fpyMD9PosPhHSIp5kealPzqu0ma/9DJH0WSs+RFCJcg2fQ==
@@ -30,7 +30,7 @@
   resolved "https://registry.yarnpkg.com/@arkecosystem/core-event-emitter/-/core-event-emitter-2.6.49.tgz#518588f52c0595b5376e720b91888edbd4257334"
   integrity sha512-TGy8J5OxwTZpYqUDuSWGiXYqOAHuv+zloSOjR2e22VegMWtzfZSHestr1CoJS4V0jks1ZgpijtNYDpET2MZ7jA==
 
-"@arkecosystem/core-interfaces@^2.6.39", "@arkecosystem/core-interfaces@^2.6.49":
+"@arkecosystem/core-interfaces@2.6.49", "@arkecosystem/core-interfaces@^2.6.39", "@arkecosystem/core-interfaces@^2.6.49":
   version "2.6.49"
   resolved "https://registry.yarnpkg.com/@arkecosystem/core-interfaces/-/core-interfaces-2.6.49.tgz#7bcbeba07a29ca557d86a74ce38633926ec8497b"
   integrity sha512-8U5G3YPyvanUe1qDg1KKTv0hwyiOb8ngr0TK4wSXfIcF95+Gqc+7ibPbxoXT1Z3509Ue1kuQq/92Ko/YRuat8w==
@@ -637,7 +637,7 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@nosplatform/stake-transactions-crypto@^0.2.4":
+"@nosplatform/stake-transactions-crypto@0.2.4":
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/@nosplatform/stake-transactions-crypto/-/stake-transactions-crypto-0.2.4.tgz#0c0bd774872b4c73426b4a4f7d051fcdc589c7b2"
   integrity sha512-5jr25uaNOkqr6RYA/P/cFHAH4sxlluHiMg3WDvgu4EKbhZsgxTQpuCOmez8/yOtkNShBrqWERpAcuKjXGj+/dg==
