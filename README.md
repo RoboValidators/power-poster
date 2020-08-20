@@ -55,6 +55,7 @@ ccontrol start relay | forger | core
 
 # If you see ============== POWER-BOT ==============
 # in your logs during startup, everything is set and done!
+# **NOTE** The log will only appear AFTER syncing due to plugin order
 
 ```
 
