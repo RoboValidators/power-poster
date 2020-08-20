@@ -1,7 +1,7 @@
 # Compendia/ARK Core - Power Bot
 
 <p align="center">
-    <img src="https://github.com/ArkEcosystem/core-plugin-skeleton/blob/master/banner.png" />
+    <img src="./.github/Bindie-announce.png" alt="bindie" width="125px" heigth="160px" />
 </p>
 
 > A Twitter & Telegram bot announcing Big $BIND stakes and daily stake reports
