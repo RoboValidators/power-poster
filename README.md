@@ -34,6 +34,7 @@ module.exports = {
         currency: "USD" // Token value currency you want to query and post
     },
     // Any other plugins ..
+};
 ```
 
 ```bash
