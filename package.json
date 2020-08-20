@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@robovalidators/power-bot",
+  "name": "@robovalidators/power-poster",
   "description": "Provides a social media bot for Compendia & Ark Core",
   "version": "1.0.0",
   "contributors": [
