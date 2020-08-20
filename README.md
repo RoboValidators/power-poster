@@ -1,4 +1,4 @@
-# Compendia/ARK Core - Power Poster
+# Compendia Core - Power Poster
 
 <p align="center">
     <img src="./.github/Bindie-announce.png" alt="bindie" width="125"/>
