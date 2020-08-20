@@ -45,7 +45,7 @@ cd ~/nos-core/plugins/
 git clone https://github.com/RoboValidators/power-poster
 
 # Install deps
-cd power-bot && yarn
+cd power-poster && yarn
 
 # Build the project
 yarn build
