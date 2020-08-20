@@ -17,4 +17,4 @@ export const defaults = {
   currency: "USD"
 };
 
-export const alias = "power-bot";
+export const alias = "power-poster";
