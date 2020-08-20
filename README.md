@@ -1,4 +1,4 @@
-# Compendia/ARK Core - Power Bot
+# Compendia/ARK Core - Power Poster
 
 <p align="center">
     <img src="./.github/Bindie-announce.png" alt="bindie" width="125px" heigth="160px" />
@@ -15,7 +15,7 @@
 ```javascript
 module.exports = {
     // AFTER @arkecosystem/core-api & @arkecosystem/core-wallet-api
-    "@robovalidators/power-bot": {
+    "@robovalidators/power-poster": {
         telegram: {
             token: "", // Telegram token (obtained from @BotFather)
             channelId: "" // ID of the telegram channel you want to announce in
@@ -42,7 +42,7 @@ module.exports = {
 cd ~/nos-core/plugins/
 
 # Clone repo
-git clone https://github.com/RoboValidators/power-bot
+git clone https://github.com/RoboValidators/power-poster
 
 # Install deps
 cd power-bot && yarn
@@ -53,7 +53,7 @@ yarn build
 # Start the validator/relay
 ccontrol start relay | forger | core
 
-# If you see ============== POWER-BOT ==============
+# If you see ============== POWER-POSTER ==============
 # in your logs during startup, everything is set and done!
 # **NOTE** The log will only appear AFTER syncing due to plugin order
 
