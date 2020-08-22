@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Container, Logger } from "@arkecosystem/core-interfaces";
+import { Container, Logger, EventEmitter } from "@arkecosystem/core-interfaces";
 
 import { defaults, alias } from "./defaults";
 import listener from "./listener";
@@ -13,9 +13,10 @@ export const plugin: Container.IPluginDescriptor = {
   alias,
   async register(container: Container.IContainer, options) {
     container.resolvePlugin<Logger.ILogger>("logger").info(wall(`Registering ${alias}.`));
+    const emitter = container.resolvePlugin<EventEmitter.EventEmitter>("event-emitter");
 
     Options.setOptions(options as any);
-    listener.setUp(options);
+    listener.setUp(options, emitter);
   },
   async deregister(container: Container.IContainer, _) {
     container.resolvePlugin<Logger.ILogger>("logger").info(wall(`Deregistering ${alias}.`));

@@ -1,13 +1,10 @@
-import { app } from "@arkecosystem/core-container";
 import { EventEmitter } from "@arkecosystem/core-interfaces";
 
 import queue from "./queue";
 import { PowerUp, Events, Block, Options } from "./types";
 
-const emitter = app.resolvePlugin<EventEmitter.EventEmitter>("event-emitter");
-
 class Listener {
-  setUp(options: Partial<Options>) {
+  setUp(options: Partial<Options>, emitter: EventEmitter.EventEmitter) {
     emitter.on(Events.PowerUp, async ({ stake, block }: PowerUp) => {
       if (block.height > options.startHeight) {
         queue.add({ stake, block, event: Events.PowerUp });
