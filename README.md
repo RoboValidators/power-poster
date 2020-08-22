@@ -10,7 +10,7 @@
 
 ## Installation
 
-#### Configuration required for path ~/.config/nos-core/network-name/plugins.js
+#### Configuration required for path ~/.config/compendia-core/network-name/plugins.js
 
 ```javascript
 module.exports = {
@@ -29,8 +29,8 @@ module.exports = {
         minimumAmount: 0, // Minimum amount of USD to announce as a "whale"-post
         startHeight: 0, // Heigh to start the announcements from
         interval: 86400, // Interval between daily stake reports in seconds: 86 400 seconds = 1 day
-        txUrl: "https://explorer.nos.dev/transactions", // API endpoint for transactions
-        token: "nos", // Token you want to use (used in price API call)
+        txUrl: "https://bindscan.io/transactions", // API endpoint for transactions
+        token: "BIND", // Token you want to use (used in price API call)
         currency: "USD" // Token value currency you want to query and post
     },
     // Any other plugins ..
@@ -39,7 +39,7 @@ module.exports = {
 
 ```bash
 # Navigate to plugins folder
-cd ~/nos-core/plugins/
+cd ~/compendia-core/plugins/
 
 # Clone repo
 git clone https://github.com/RoboValidators/power-poster
