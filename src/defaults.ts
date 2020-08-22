@@ -12,8 +12,8 @@ export const defaults = {
   minimumAmount: 0,
   startHeight: 0,
   interval: 86400, // 86 400 seconds = 1 day
-  txUrl: "https://explorer.nos.dev/transactions",
-  token: "nos",
+  txUrl: "https://bindscan.io/transactions",
+  token: "BIND",
   currency: "USD"
 };
 
