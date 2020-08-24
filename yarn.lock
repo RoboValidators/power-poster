@@ -30,7 +30,7 @@
   resolved "https://registry.yarnpkg.com/@arkecosystem/core-event-emitter/-/core-event-emitter-2.6.52.tgz#a5e65af864f2c20ad23250bade5f9afccc05c8fd"
   integrity sha512-tXJc0KRAGgN/dw44ftzp7ea/bYzm13jjzzlygBTUiqTueuqcSc0JnRyHG2k6qRt8rBWhmeygl2Qm7iLAOLsIMA==
 
-"@arkecosystem/core-interfaces@2.6.49", "@arkecosystem/core-interfaces@^2.6.39":
+"@arkecosystem/core-interfaces@2.6.49":
   version "2.6.49"
   resolved "https://registry.yarnpkg.com/@arkecosystem/core-interfaces/-/core-interfaces-2.6.49.tgz#7bcbeba07a29ca557d86a74ce38633926ec8497b"
   integrity sha512-8U5G3YPyvanUe1qDg1KKTv0hwyiOb8ngr0TK4wSXfIcF95+Gqc+7ibPbxoXT1Z3509Ue1kuQq/92Ko/YRuat8w==
@@ -48,7 +48,7 @@
     awilix "^4.2.2"
     dayjs "^1.8.15"
 
-"@arkecosystem/crypto@^2.6.39", "@arkecosystem/crypto@^2.6.49":
+"@arkecosystem/crypto@^2.6.49":
   version "2.6.49"
   resolved "https://registry.yarnpkg.com/@arkecosystem/crypto/-/crypto-2.6.49.tgz#b17e71ed03853e34a97a7b9a5e406089a15a7251"
   integrity sha512-ZcIdbP6d666XBsH0Ko8lFw23R1XQW1VYvf2SLZi7uo+9IO/ikzBMvSBRtdZelufncVmPnL+wauC6M8FVTeRB9w==
@@ -672,13 +672,13 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@nosplatform/stake-transactions-crypto@0.2.4":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@nosplatform/stake-transactions-crypto/-/stake-transactions-crypto-0.2.4.tgz#0c0bd774872b4c73426b4a4f7d051fcdc589c7b2"
-  integrity sha512-5jr25uaNOkqr6RYA/P/cFHAH4sxlluHiMg3WDvgu4EKbhZsgxTQpuCOmez8/yOtkNShBrqWERpAcuKjXGj+/dg==
+"@nosplatform/stake-transactions-crypto@0.2.5":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@nosplatform/stake-transactions-crypto/-/stake-transactions-crypto-0.2.5.tgz#815048c3b930087023393158b343647f4335fbd0"
+  integrity sha512-SXxFvxylQat7OaGgRLRZXtUWtxq/VnqAe0hDQP4gT52MkSrXfgSVOZVHZwHGI52AyHrQUZmMPqjs/FVxecfivw==
   dependencies:
-    "@arkecosystem/core-interfaces" "^2.6.39"
-    "@arkecosystem/crypto" "^2.6.39"
+    "@arkecosystem/core-interfaces" "^2.6.52"
+    "@arkecosystem/crypto" "^2.6.52"
 
 "@npmcli/ci-detect@^1.0.0":
   version "1.3.0"
