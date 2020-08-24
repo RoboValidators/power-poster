@@ -803,10 +803,10 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
-"@types/bull@3.14.0":
-  version "3.14.0"
-  resolved "https://registry.yarnpkg.com/@types/bull/-/bull-3.14.0.tgz#60741d3f5006bd4e17b02ff036e6ecef7ac47a6e"
-  integrity sha512-9MKWQ4Q+GFIEA3/SdSc128mAccCKni2YVMKPEdQY5qooN+3gl0Po+f7kaKukgn5s6YXj5xbvc/zTaMsHZL9GvA==
+"@types/bull@3.14.2":
+  version "3.14.2"
+  resolved "https://registry.yarnpkg.com/@types/bull/-/bull-3.14.2.tgz#18c1d9a9dd079ca63971b4d0fac16fc9f5777491"
+  integrity sha512-+g3Qha7ObdadnM4v/Sz9WDx8eKEaRL4usQmkeUEC25uAltFLioDbAaLnUggfWHONVzW2AxOgzS19ekMmx6zLzA==
   dependencies:
     "@types/ioredis" "*"
 
@@ -1597,21 +1597,21 @@ builtins@^1.0.3:
   resolved "https://registry.yarnpkg.com/builtins/-/builtins-1.0.3.tgz#cb94faeb61c8696451db36534e1422f94f0aee88"
   integrity sha1-y5T662HIaWRR2zZTThQi+U8K7og=
 
-bull@3.16.0:
-  version "3.16.0"
-  resolved "https://registry.yarnpkg.com/bull/-/bull-3.16.0.tgz#adabb8404ebecedfbe4f3b9b2163e249de1915ff"
-  integrity sha512-5RAeKPJwhzuk5y4TL5ys+mX1p1r8TOKUF537c2VFVqg0Z+Y2zL1gXfgk0OAlIhD+9E/q3BgRvN96AxUz6nfBDA==
+bull@3.18.0:
+  version "3.18.0"
+  resolved "https://registry.yarnpkg.com/bull/-/bull-3.18.0.tgz#7d7730c8ab0975ea9ee4e74f6f85bd731c3526cb"
+  integrity sha512-nE/BKlg1dnJ/AcOy5D1nzthcmpAKqpUVXzQ43mJfnVC8ZM7mi4ZzP3spN7745UuikzmGGsbTe9px2TbEKhR+DQ==
   dependencies:
     cron-parser "^2.13.0"
     debuglog "^1.0.0"
     get-port "^5.1.1"
     ioredis "^4.14.1"
-    lodash "^4.17.15"
+    lodash "^4.17.19"
     p-timeout "^3.2.0"
     promise.prototype.finally "^3.1.2"
-    semver "^6.3.0"
+    semver "^7.3.2"
     util.promisify "^1.0.1"
-    uuid "^8.2.0"
+    uuid "^8.3.0"
 
 bytebuffer@^5.0.1:
   version "5.0.1"
@@ -6819,7 +6819,7 @@ uuid@^3.3.2:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
-uuid@^8.2.0:
+uuid@^8.2.0, uuid@^8.3.0:
   version "8.3.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.0.tgz#ab738085ca22dc9a8c92725e459b1d507df5d6ea"
   integrity sha512-fX6Z5o4m6XsXBdli9g7DtWgAx+osMsRRZFKma1mIUsLCz6vRvv+pz5VNbyu9UEDzpMWulZfvpgb/cmDXVulYFQ==
