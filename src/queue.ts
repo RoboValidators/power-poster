@@ -1,18 +1,17 @@
 import Queue from "bull";
-import { app } from "@arkecosystem/core-container";
-import { Logger } from "@arkecosystem/core-interfaces";
 
 import { PowerUpJob, Events, BlockAppliedJob } from "./types";
 
 import db from "./database";
 import PowerupService from "./services/PowerupService";
 import BlockAppliedService from "./services/BlockAppliedService";
+import LoggerService from "./services/LoggerService";
 
 const publish = new Queue<PowerUpJob | BlockAppliedJob>("publish");
-const logger = app.resolvePlugin<Logger.ILogger>("logger");
 
 publish.process(async (job, done) => {
   const { event } = job.data;
+  const logger = LoggerService.getLogger();
 
   // Everything available with a PowerUp Event
   if (event === Events.PowerUp) {
