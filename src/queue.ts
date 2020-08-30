@@ -18,7 +18,7 @@ publish.process(async (job, done) => {
     const { stake } = job.data as PowerUpJob;
 
     // Save every stake, this is required for the BlockApplied event
-    (await db.getInstance()).get("stakes").push(stake).write();
+    await db.pushStake(stake);
 
     await PowerupService.check(stake);
 

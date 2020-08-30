@@ -12,7 +12,6 @@ class Listener {
     });
 
     emitter.on(Events.BlockApplied, async (block: Block) => {
-      // TODO set limiter if(block.height % 100) to prevent checking on every block
       if (block.height > options.startHeight) {
         queue.add({ stake: null, block, event: Events.BlockApplied });
       }

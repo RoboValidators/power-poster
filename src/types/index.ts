@@ -6,6 +6,12 @@ import BigNumber from "bignumber.js";
 export type Stake = StakeInterfaces.IStakeObject;
 export type Block = Interfaces.IBlockData;
 export type ParserType = Utils.BigNumber | BigNumber | string | number;
+export type StakeTimestamps = {
+  created: number;
+  graceEnd: number;
+  powerUp: number;
+  redeemable: number;
+};
 
 export interface PowerUp {
   stake: Stake;
@@ -69,6 +75,7 @@ export enum Publishers {
 }
 
 export enum Events {
+  RoundCreated = "round.created",
   BlockApplied = "block.applied",
   PowerUp = "stake.powerup"
 }

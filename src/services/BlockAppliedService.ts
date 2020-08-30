@@ -11,12 +11,11 @@ export default class BlockAppliedService {
   static async check(block: Block) {
     const options = OptionsService.getOptions();
 
-    const collections = await db.getInstance();
-    const lastReport = collections.get("lastReport").value();
+    const lastReport = await db.getLastReport();
     const nextMoment = moment(lastReport).add(options.interval, "seconds");
 
     if (nextMoment.isBefore(moment.now())) {
-      const stakes = collections.get("stakes").value();
+      const stakes = await db.getStakes();
       if (stakes.length > 0) {
         const status = await MessageBuilder.buildAggroMessage(stakes, lastReport);
         await publisherService.publishAll(status);
@@ -25,8 +24,9 @@ export default class BlockAppliedService {
         const { data: blockDTO } = await axios.get<BlockDTO>(
           `http://localhost:4003/api/blocks/${block.id}`
         );
-        collections.set("lastReport", blockDTO.data.timestamp.human).write();
-        collections.set("stakes", []).write();
+
+        await db.setLastReport(blockDTO.data.timestamp.human);
+        await db.clearStakes();
       }
     }
   }

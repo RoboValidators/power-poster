@@ -9,3 +9,6 @@ db.json
 
 # Test file
 ./src/test.ts
+
+# Firebase secrest
+serviceAccountKey.json
