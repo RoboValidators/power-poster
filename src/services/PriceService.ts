@@ -45,15 +45,15 @@ class PriceService {
     return response.data[token.toLowerCase()][this.options.currency.toLowerCase()];
   }
 
-  public async getTotalPrice(stakeAmount: BigNumber, token = this.options.token) {
+  public async getTotalPrice(amount: BigNumber, token = this.options.token) {
     const price = await this.getPrice(token);
 
-    return stakeAmount.times(price).toFixed(2);
+    return amount.times(price).toFixed(2);
   }
 
-  public async isTimesGreaterThan(stakeAmount: BigNumber, times = 1, token = this.options.token) {
+  public async isTimesGreaterThan(amount: BigNumber, times = 1, token = this.options.token) {
     const minimum = Parser.toBN(this.options.minimumAmount);
-    const totalValue = Parser.toBN(await this.getTotalPrice(stakeAmount, token));
+    const totalValue = Parser.toBN(await this.getTotalPrice(amount, token));
 
     return totalValue.isGreaterThan(minimum.times(times));
   }
