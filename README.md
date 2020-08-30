@@ -2,13 +2,11 @@
 
 <p align="center">
     <img src="./.github/Bindie-announce.png" alt="bindie" width="125"/>
-</p>
+
 
 > A Twitter & Telegram bot announcing Big $BIND stakes and daily stake reports - Created By Compendia Validator Bindie
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-
----
 
 ## Support
 
