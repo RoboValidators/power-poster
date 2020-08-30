@@ -10,5 +10,5 @@ db.json
 # Test file
 ./src/test.ts
 
-# Firebase secrest
+# Firebase secrets
 serviceAccountKey.json
