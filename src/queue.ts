@@ -19,7 +19,7 @@ publishQueue.process(async (job, done) => {
   if (event === Events.PowerUp) {
     const { stake } = job.data as PowerUpJob;
 
-    // Save every stake, this is required for the BlockApplied event
+    // Save every stake, this is required for the Report Service
     await db.pushStake(stake);
 
     await PowerupService.check(stake);

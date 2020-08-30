@@ -1,11 +1,9 @@
-import { Managers } from "@arkecosystem/crypto";
-import BigNumber from "bignumber.js";
+import moment from "moment";
 
-import { Stake } from "../types";
-import Parser from "./parser";
 import OptionsService from "../services/OptionsService";
 import PriceService from "../services/PriceService";
-import moment from "moment";
+import { Stake, StakeData } from "../types";
+import Parser from "./parser";
 
 export default class MessageBuilder {
   public static async buildPowerMessage(stake: Stake): Promise<string> {
@@ -39,7 +37,7 @@ export default class MessageBuilder {
     return `${preMessage}🔊 ${baseMessage} 📨 ${postMessage}`;
   }
 
-  public static async buildAggroMessage(stakes: Stake[], lastReport: Date): Promise<string> {
+  public static async buildAggroMessage(stakeData: StakeData, lastReport: Date): Promise<string> {
     const options = OptionsService.getOptions();
 
     const sinceDate = Parser.formatDate(lastReport);
@@ -47,13 +45,8 @@ export default class MessageBuilder {
 
     let baseMessage = `⌛📜 Stakes since the last report of ${sinceDate} (${sinceHours} hours ago):\n\n`;
 
-    const stakeLevels = Object.keys(Managers.configManager.getMilestone().stakeLevels);
-
-    for (const stakeLevel of stakeLevels) {
-      const filteredStakes = stakes.filter((stake) => stake.duration.toString() === stakeLevel);
-      const total = filteredStakes.reduce((acc, stake) => {
-        return acc.plus(Parser.normalize(stake.amount));
-      }, new BigNumber(0));
+    for (const stake of stakeData) {
+      const { total, stakeLevel } = stake;
 
       const totalFormatted = Parser.formatAmount(total);
       const priceTotalAmount = await PriceService().getTotalPrice(total);

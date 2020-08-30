@@ -13,12 +13,13 @@ export type StakeTimestamps = {
   redeemable: number;
 };
 
+export type StakeData = {
+  stakeLevel: string;
+  total: BigNumber;
+}[];
+
 export interface PowerUp {
   stake: Stake;
-  block: Block;
-}
-
-export interface BlockApplied {
   block: Block;
 }
 
@@ -33,11 +34,6 @@ export interface CronJob {
 export interface Publisher {
   publish(status: string): Promise<void>;
   toString(): string;
-}
-
-export interface Scheme {
-  stakes: Stake[];
-  lastReport: Date;
 }
 
 export interface Options extends Container.IPluginOptions {
