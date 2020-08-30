@@ -14,7 +14,8 @@ export const defaults = {
   interval: 86400, // 86 400 seconds = 1 day
   txUrl: "https://bindscan.io/transactions",
   token: "BIND",
-  currency: "USD"
+  currency: "USD",
+  cron: "0 20 * * *"
 };
 
 export const alias = "power-poster";

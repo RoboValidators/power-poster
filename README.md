@@ -48,7 +48,8 @@ module.exports = {
         interval: 86400, // Interval between daily stake reports in seconds: 86 400 seconds = 1 day
         txUrl: "https://bindscan.io/transactions", // API endpoint for transactions
         token: "BIND", // Token you want to use (used in price API call)
-        currency: "USD" // Token value currency you want to query and post
+        currency: "USD", // Token value currency you want to query and post
+        cron: "0 20 * * *" // The cron expression used for the accumulative stake reports
     },
     // Any other plugins ..
 };

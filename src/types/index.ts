@@ -26,7 +26,7 @@ export interface PowerUpJob extends PowerUp {
   event: Events;
 }
 
-export interface BlockAppliedJob extends BlockApplied {
+export interface CronJob {
   event: Events;
 }
 
@@ -57,6 +57,7 @@ export interface Options extends Container.IPluginOptions {
   txUrl: string;
   token: string;
   currency: string;
+  cron: string;
 }
 
 export interface BlockDTO {
@@ -75,7 +76,6 @@ export enum Publishers {
 }
 
 export enum Events {
-  RoundCreated = "round.created",
-  BlockApplied = "block.applied",
+  Cron = "cron",
   PowerUp = "stake.powerup"
 }

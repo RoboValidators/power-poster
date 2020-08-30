@@ -28,7 +28,7 @@ export default class DB {
     }
   }
 
-  static async pushStake(stake: Stake) {
+  static async pushStake(stake: Stake): Promise<void> {
     await stakeRepository.create(stake);
   }
 
