@@ -8,6 +8,7 @@ import stakeRepository from "./repositories/StakeRepository";
 import reportRepository from "./repositories/ReportRepository";
 import ReportModel from "./models/Report";
 import { Stake } from "../types";
+import LoggerService from "../services/LoggerService";
 
 const lastReportId = "bindie";
 
@@ -18,14 +19,22 @@ export default class DB {
 
   static async initialize(): Promise<void> {
     if (!DB.firestore) {
-      admin.initializeApp({
-        credential: admin.credential.cert(serviceAccount as any),
-        databaseURL: `https://${serviceAccount.project_id}.firebaseio.com`
-      });
+      const logger = LoggerService.getLogger();
+      logger.info("Trying..");
+      logger.info(serviceAccount);
+      try {
+        admin.initializeApp({
+          credential: admin.credential.cert(serviceAccount as any),
+          databaseURL: `https://${serviceAccount.project_id}.firebaseio.com`
+        });
 
-      const firestore = admin.firestore();
-      fireorm.initialize(firestore);
-      DB.firestore = firestore;
+        const firestore = admin.firestore();
+        fireorm.initialize(firestore);
+        DB.firestore = firestore;
+      } catch (e) {
+        logger.error("ERROR");
+        logger.error(e);
+      }
     }
   }
 
