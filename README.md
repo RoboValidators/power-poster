@@ -53,6 +53,7 @@ module.exports = {
     // Any other plugins ..
 };
 ```
+As a tip, check your expressions here to verify they are correct: [cron expression generator](https://crontab.cronhub.io/)
 
 ```bash
 # Install Redis
