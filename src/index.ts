@@ -3,7 +3,7 @@ process.env.NTBA_FIX_319 = "1";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import "firebase/firestore";
-import fireorm from "fireorm";
+import * as fireorm from "fireorm";
 import admin from "firebase-admin";
 
 import serviceAccount from "../serviceAccountKey.json";
