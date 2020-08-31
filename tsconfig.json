@@ -22,7 +22,7 @@
 //     "skipLibCheck": true,
 //     "experimentalDecorators": true
 //   },
-//   "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts", "__tests__/__support__"]
+//   "exclude": ["node_modules", "dist", "**/*.spec.ts", "**/*.test.ts", "__tests__/__support__"]
 // }
 
 // FOR PROD

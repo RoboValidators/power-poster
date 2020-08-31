@@ -14,6 +14,7 @@
   "scripts": {
     "dev": "ts-node ./src/test.ts",
     "dev:lint": "eslint ./src",
+    "dev:build": "tsc -w",
     "prepublishOnly": "yarn test && yarn build",
     "pretest": "yarn lint && yarn build",
     "compile": "../../node_modules/typescript/bin/tsc",

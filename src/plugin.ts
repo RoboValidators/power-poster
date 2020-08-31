@@ -5,11 +5,12 @@ import { defaults, alias } from "./defaults";
 import listener from "./listener";
 import Options from "./services/OptionsService";
 import LoggerService from "./services/LoggerService";
+import pkg from "../package.json";
 
 const wall = (text: string) => `============= ${text.toUpperCase()} =============`;
 
 export const plugin: Container.IPluginDescriptor = {
-  pkg: require("../package.json"),
+  pkg,
   defaults,
   alias,
   async register(container: Container.IContainer, options) {
