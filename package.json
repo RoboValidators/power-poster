@@ -44,7 +44,6 @@
     "firebase": "7.19.1",
     "firebase-admin": "9.1.1",
     "fireorm": "0.17.0",
-    "lowdb": "1.0.0",
     "moment": "2.27.0",
     "node-telegram-bot-api": "0.50.0",
     "reflect-metadata": "0.1.13",

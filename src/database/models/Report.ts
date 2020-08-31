@@ -1,6 +1,6 @@
 import { Collection } from "fireorm";
 
-@Collection()
+@Collection("lastReport")
 export default class ReportModel {
   id: string;
   date: Date;

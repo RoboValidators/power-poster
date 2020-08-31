@@ -3,7 +3,7 @@ import { Utils } from "@arkecosystem/crypto";
 
 import { StakeTimestamps, Stake } from "../../types";
 
-@Collection()
+@Collection("stakes")
 export default class StakeModel implements Stake {
   id: string;
   senderPublicKey?: string;

@@ -17,9 +17,12 @@ export default class DB {
   }
 
   static async clearStakes(): Promise<void> {
-    (await stakeRepository.find()).forEach((stake) => {
-      stakeRepository.delete(stake.id);
-    });
+    const stakes = await stakeRepository.find();
+    const batch = stakeRepository.createBatch();
+
+    stakes.forEach((stake) => batch.delete(stake));
+
+    await batch.commit();
   }
 
   static async getLastReport(): Promise<Date> {
