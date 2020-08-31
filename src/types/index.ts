@@ -49,7 +49,6 @@ export interface Options extends Container.IPluginOptions {
   };
   minimumAmount: number;
   startHeight: number;
-  interval: number;
   txUrl: string;
   token: string;
   currency: string;

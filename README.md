@@ -45,7 +45,6 @@ module.exports = {
         },
         minimumAmount: 0, // Minimum amount of USD to announce as a "whale"-post
         startHeight: 0, // Heigh to start the announcements from
-        interval: 86400, // Interval between daily stake reports in seconds: 86 400 seconds = 1 day
         txUrl: "https://bindscan.io/transactions", // API endpoint for transactions
         token: "BIND", // Token you want to use (used in price API call)
         currency: "USD", // Token value currency you want to query and post
