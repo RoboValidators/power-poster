@@ -5,7 +5,6 @@ import { defaults, alias } from "./defaults";
 import listener from "./listener";
 import Options from "./services/OptionsService";
 import LoggerService from "./services/LoggerService";
-import db from "./database";
 
 const wall = (text: string) => `============= ${text.toUpperCase()} =============`;
 
@@ -20,7 +19,6 @@ export const plugin: Container.IPluginDescriptor = {
 
     LoggerService.setLogger(logger);
     Options.setOptions(options as any);
-    await db.initialize();
     listener.setUp(options, emitter);
   },
   async deregister(container: Container.IContainer, _) {
