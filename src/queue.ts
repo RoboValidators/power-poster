@@ -7,7 +7,6 @@ import PowerupService from "./services/PowerupService";
 import ReportService from "./services/ReportService";
 import LoggerService from "./services/LoggerService";
 import { alias } from "./defaults";
-import OptionsService from "./services/OptionsService";
 
 const publishQueue = new Queue<PowerUpJob | CronJob>("publish");
 
@@ -34,8 +33,5 @@ publishQueue.process(async (job, done) => {
 
   done(null, { job });
 });
-
-// Add cron job
-publishQueue.add({ event: Events.Cron }, { repeat: { cron: OptionsService.getOptions().cron } });
 
 export default publishQueue;
