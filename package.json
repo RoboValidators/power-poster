@@ -7,7 +7,7 @@
     "Bindie Dev <hello@bindie.io>"
   ],
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "files": [
     "dist"
   ],
