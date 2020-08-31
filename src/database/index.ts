@@ -1,5 +1,6 @@
 import stakeRepository from "./repositories/StakeRepository";
 import reportRepository from "./repositories/ReportRepository";
+import stakeAnalyticsRepository from "./repositories/StakeAnalyticsRepository";
 import ReportModel from "./models/Report";
 import { Stake } from "../types";
 
@@ -10,6 +11,7 @@ export default class DB {
 
   static async pushStake(stake: Stake): Promise<void> {
     await stakeRepository.create(stake);
+    await stakeAnalyticsRepository.create(stake);
   }
 
   static async getStakes(): Promise<Stake[]> {
