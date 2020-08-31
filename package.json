@@ -40,6 +40,7 @@
     "bignumber.js": "9.0.0",
     "bull": "3.16.0",
     "delay": "4.4.0",
+    "firebase": "7.19.1",
     "firebase-admin": "9.1.1",
     "fireorm": "0.17.0",
     "lowdb": "1.0.0",
