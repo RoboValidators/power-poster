@@ -3,6 +3,7 @@ import reportRepository from "./repositories/ReportRepository";
 import stakeAnalyticsRepository from "./repositories/StakeAnalyticsRepository";
 import ReportModel from "./models/Report";
 import { Stake } from "../types";
+import LoggerService from "../services/LoggerService";
 
 const lastReportId = "bindie";
 
@@ -28,15 +29,17 @@ export default class DB {
   }
 
   static async getLastReport(): Promise<Date> {
-    const result = await reportRepository.findById(lastReportId);
-    if (result) {
+    try {
+      const result = await reportRepository.findById(lastReportId);
       return result.date;
-    }
+    } catch (e) {
+      LoggerService.getLogger().info("Initializing lastReport collection");
 
-    // Set new default date
-    const newDate = new Date();
-    await DB.setLastReport(newDate);
-    return newDate;
+      // Set new default date
+      const newDate = new Date();
+      await DB.setLastReport(newDate);
+      return newDate;
+    }
   }
 
   static async setLastReport(date: Date): Promise<void> {
