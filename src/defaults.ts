@@ -14,7 +14,7 @@ export const defaults = {
   txUrl: "https://bindscan.io/transactions",
   token: "BIND",
   currency: "USD",
-  cron: "0 20 * * *"
+  cron: "0 18 * * *"
 };
 
 export const alias = "power-poster";
