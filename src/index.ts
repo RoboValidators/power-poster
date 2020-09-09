@@ -9,7 +9,7 @@ import admin from "firebase-admin";
 import serviceAccount from "../serviceAccountKey.json";
 import { alias } from "./defaults";
 
-admin.initializeApp(
+const instance = admin.initializeApp(
   {
     credential: admin.credential.cert(serviceAccount as any),
     databaseURL: `https://${serviceAccount.project_id}.firebaseio.com`
@@ -17,6 +17,6 @@ admin.initializeApp(
   alias
 );
 
-fireorm.initialize(admin.firestore());
+fireorm.initialize(instance.firestore());
 
 export * from "./plugin";

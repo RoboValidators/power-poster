@@ -18,7 +18,7 @@ export default class ReportService {
       const stakeLevels = Object.keys(Managers.configManager.getMilestone().stakeLevels);
 
       const stakeData: StakeData = [];
-      const overallTotal = new BigNumber(0);
+      let overallTotal = new BigNumber(0);
 
       // Get total amount per stakeLevel
       stakeLevels.forEach((stakeLevel) => {
@@ -28,7 +28,7 @@ export default class ReportService {
         }, new BigNumber(0));
 
         if (!total.isZero()) {
-          overallTotal.plus(total);
+          overallTotal = overallTotal.plus(total);
           stakeData.push({
             stakeLevel,
             total
