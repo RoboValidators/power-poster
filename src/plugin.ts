@@ -4,17 +4,21 @@ import { Container, Logger, EventEmitter } from "@arkecosystem/core-interfaces";
 import { defaults, alias } from "./defaults";
 import listener from "./listener";
 import Options from "./services/OptionsService";
+import LoggerService from "./services/LoggerService";
+import pkg from "../package.json";
 
 const wall = (text: string) => `============= ${text.toUpperCase()} =============`;
 
 export const plugin: Container.IPluginDescriptor = {
-  pkg: require("../package.json"),
+  pkg,
   defaults,
   alias,
   async register(container: Container.IContainer, options) {
-    container.resolvePlugin<Logger.ILogger>("logger").info(wall(`Registering ${alias}.`));
     const emitter = container.resolvePlugin<EventEmitter.EventEmitter>("event-emitter");
+    const logger = container.resolvePlugin<Logger.ILogger>("logger");
+    logger.info(wall(`Registering ${alias}.`));
 
+    LoggerService.setLogger(logger);
     Options.setOptions(options as any);
     listener.setUp(options, emitter);
   },

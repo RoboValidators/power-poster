@@ -1,38 +1,37 @@
 import Queue from "bull";
-import { app } from "@arkecosystem/core-container";
-import { Logger } from "@arkecosystem/core-interfaces";
 
-import { PowerUpJob, Events, BlockAppliedJob } from "./types";
+import { PowerUpJob, Events, CronJob } from "./types";
 
 import db from "./database";
 import PowerupService from "./services/PowerupService";
-import BlockAppliedService from "./services/BlockAppliedService";
+import ReportService from "./services/ReportService";
+import LoggerService from "./services/LoggerService";
+import { alias } from "./defaults";
 
-const publish = new Queue<PowerUpJob | BlockAppliedJob>("publish");
-const logger = app.resolvePlugin<Logger.ILogger>("logger");
+const publishQueue = new Queue<PowerUpJob | CronJob>("publish");
 
-publish.process(async (job, done) => {
+publishQueue.process(async (job, done) => {
   const { event } = job.data;
+  const logger = LoggerService.getLogger();
 
   // Everything available with a PowerUp Event
   if (event === Events.PowerUp) {
     const { stake } = job.data as PowerUpJob;
 
-    // Save every stake, this is required for the BlockApplied event
-    (await db.getInstance()).get("stakes").push(stake).write();
+    // Save every stake, this is required for the Report Service
+    await db.pushStake(stake);
 
     await PowerupService.check(stake);
 
-    logger.info(`Handled ${event} for stake ${stake.id}`);
+    logger.info(`${alias} handled event ${event} for stake ${stake.id}`);
   }
 
-  // Stake NOT available with a Block Applied Event
-  if (event === Events.BlockApplied) {
-    const { block } = job.data as BlockAppliedJob;
-    await BlockAppliedService.check(block);
+  if (event === Events.Cron) {
+    await ReportService.check();
+    logger.info(`${alias} handled event ${event}`);
   }
 
   done(null, { job });
 });
 
-export default publish;
+export default publishQueue;

@@ -1,20 +1,18 @@
 import { EventEmitter } from "@arkecosystem/core-interfaces";
 
 import queue from "./queue";
-import { PowerUp, Events, Block, Options } from "./types";
+import { PowerUp, Events, Options } from "./types";
+import OptionsService from "./services/OptionsService";
 
 class Listener {
   setUp(options: Partial<Options>, emitter: EventEmitter.EventEmitter) {
+    // Setup cron job
+    queue.add({ event: Events.Cron }, { repeat: { cron: OptionsService.getOptions().cron } });
+
+    // Setup powerUp trigger and queue
     emitter.on(Events.PowerUp, async ({ stake, block }: PowerUp) => {
       if (block.height > options.startHeight) {
         queue.add({ stake, block, event: Events.PowerUp });
-      }
-    });
-
-    emitter.on(Events.BlockApplied, async (block: Block) => {
-      // TODO set limiter if(block.height % 100) to prevent checking on every block
-      if (block.height > options.startHeight) {
-        queue.add({ stake: null, block, event: Events.BlockApplied });
       }
     });
   }

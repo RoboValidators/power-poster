@@ -19,9 +19,10 @@
 //     "newLine": "lf",
 //     "stripInternal": true,
 //     "forceConsistentCasingInFileNames": true,
-//     "skipLibCheck": true
+//     "skipLibCheck": true,
+//     "experimentalDecorators": true
 //   },
-//   "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts", "__tests__/__support__"]
+//   "exclude": ["node_modules", "dist", "**/*.spec.ts", "**/*.test.ts", "__tests__/__support__"]
 // }
 
 // FOR PROD
@@ -30,7 +31,8 @@
   "compilerOptions": {
     "outDir": "dist",
     "noImplicitReturns": false,
-    "noUnusedLocals": false
+    "noUnusedLocals": false,
+    "experimentalDecorators": true
   },
   "include": ["src/**/**.ts"]
 }

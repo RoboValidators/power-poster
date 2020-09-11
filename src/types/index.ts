@@ -6,13 +6,20 @@ import BigNumber from "bignumber.js";
 export type Stake = StakeInterfaces.IStakeObject;
 export type Block = Interfaces.IBlockData;
 export type ParserType = Utils.BigNumber | BigNumber | string | number;
+export type StakeTimestamps = {
+  created: number;
+  graceEnd: number;
+  powerUp: number;
+  redeemable: number;
+};
+
+export type StakeData = {
+  stakeLevel: string;
+  total: BigNumber;
+}[];
 
 export interface PowerUp {
   stake: Stake;
-  block: Block;
-}
-
-export interface BlockApplied {
   block: Block;
 }
 
@@ -20,18 +27,13 @@ export interface PowerUpJob extends PowerUp {
   event: Events;
 }
 
-export interface BlockAppliedJob extends BlockApplied {
+export interface CronJob {
   event: Events;
 }
 
 export interface Publisher {
   publish(status: string): Promise<void>;
   toString(): string;
-}
-
-export interface Scheme {
-  stakes: Stake[];
-  lastReport: Date;
 }
 
 export interface Options extends Container.IPluginOptions {
@@ -47,10 +49,10 @@ export interface Options extends Container.IPluginOptions {
   };
   minimumAmount: number;
   startHeight: number;
-  interval: number;
   txUrl: string;
   token: string;
   currency: string;
+  cron: string;
 }
 
 export interface BlockDTO {
@@ -69,6 +71,6 @@ export enum Publishers {
 }
 
 export enum Events {
-  BlockApplied = "block.applied",
+  Cron = "cron",
   PowerUp = "stake.powerup"
 }

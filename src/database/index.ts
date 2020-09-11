@@ -1,26 +1,55 @@
-import low, { LowdbSync } from "lowdb";
-import FileSync from "lowdb/adapters/FileSync";
-import path from "path";
+import stakeRepository from "./repositories/StakeRepository";
+import reportRepository from "./repositories/ReportRepository";
+import stakeAnalyticsRepository from "./repositories/StakeAnalyticsRepository";
+import ReportModel from "./models/Report";
+import { Stake } from "../types";
 
-import { Scheme } from "../types";
-
-const emptyScheme: Scheme = {
-  stakes: [],
-  lastReport: new Date("1970")
-};
+const lastReportId = "bindie";
 
 export default class DB {
-  private static collections: LowdbSync<Scheme>;
-
   private constructor() {}
 
-  static async getInstance(): Promise<LowdbSync<Scheme>> {
-    if (!DB.collections) {
-      const adapter = new FileSync<Scheme>(path.join(__dirname + "/../../" + "db.json"));
-      DB.collections = low(adapter);
-      DB.collections.defaults(emptyScheme).write();
+  static async pushStake(stake: Stake): Promise<void> {
+    await stakeRepository.create(stake);
+    await stakeAnalyticsRepository.create(stake);
+  }
+
+  static async getStakes(): Promise<Stake[]> {
+    return stakeRepository.find();
+  }
+
+  static async clearStakes(): Promise<void> {
+    const stakes = await stakeRepository.find();
+    const batch = stakeRepository.createBatch();
+
+    stakes.forEach((stake) => batch.delete(stake));
+
+    await batch.commit();
+  }
+
+  static async getLastReport(): Promise<Date> {
+    const result = await reportRepository.findById(lastReportId);
+    if (result) {
+      return result.date;
     }
 
-    return DB.collections;
+    // Set new default date
+    const newDate = new Date();
+    await DB.setLastReport(newDate);
+    return newDate;
+  }
+
+  static async setLastReport(date: Date): Promise<void> {
+    const result = await reportRepository.findById(lastReportId);
+
+    if (result) {
+      await reportRepository.update({ ...result, date });
+    } else {
+      const report = new ReportModel();
+      report.id = lastReportId;
+      report.date = date;
+
+      await reportRepository.create(report);
+    }
   }
 }
