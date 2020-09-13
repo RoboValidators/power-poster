@@ -42,14 +42,28 @@ export default class ReportService {
         let blockDTO: BlockDTO;
 
         try {
+          LoggerService.getLogger().error("===========================111");
+
           const status = await MessageBuilder.buildAggroMessage(stakeData, lastReport);
+          LoggerService.getLogger().error("===========================22");
           await publisherService.publishAll(status);
 
+          LoggerService.getLogger().error("===========================33");
           const { data } = await axios.get<BlockDTO>(`http://localhost:4003/api/blocks/last`);
           blockDTO = data;
+          LoggerService.getLogger().error("===========================44");
         } catch (e) {
+          LoggerService.getLogger().error("===========================");
+          LoggerService.getLogger().error("===========================");
+          LoggerService.getLogger().error("===========================");
+          LoggerService.getLogger().error("===========================");
+          LoggerService.getLogger().error("===========================");
+          LoggerService.getLogger().error("===========================");
+          LoggerService.getLogger().error("===========================");
           LoggerService.getLogger().error(e);
         } finally {
+          LoggerService.getLogger().error("===========================DELETE");
+
           // Set new last published and reset stakes
           await db.setLastReport(blockDTO?.data?.timestamp?.human || new Date());
           await db.clearStakes();

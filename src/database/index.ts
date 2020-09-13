@@ -20,6 +20,8 @@ export default class DB {
 
   static async clearStakes(): Promise<void> {
     const stakes = await stakeRepository.find();
+    console.log("CLEARING STAKES");
+    console.log(stakes);
     const batch = stakeRepository.createBatch();
 
     stakes.forEach((stake) => batch.delete(stake));
