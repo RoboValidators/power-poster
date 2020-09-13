@@ -25,6 +25,13 @@ export default class DB {
     stakes.forEach((stake) => batch.delete(stake));
 
     await batch.commit();
+
+    const stakesValidate = await stakeRepository.find();
+    if (stakesValidate.length > 0) {
+      for (const stake of stakesValidate) {
+        stakeRepository.delete(stake.id);
+      }
+    }
   }
 
   static async getLastReport(): Promise<Date> {

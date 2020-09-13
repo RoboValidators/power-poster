@@ -46,7 +46,7 @@ export default class ReportService {
         );
 
         // Set new last published and reset stakes
-        await db.setLastReport(blockDTO.data.timestamp.human);
+        await db.setLastReport(blockDTO?.data?.timestamp?.human || new Date());
         await db.clearStakes();
       }
     }
