@@ -23,13 +23,14 @@ export default class DB {
     console.log("CLEARING STAKES");
     console.log(stakes);
     try {
-      const batch = stakeRepository.createBatch();
+      // const batch = stakeRepository.createBatch();
 
       for (const stake of stakes) {
-        await batch.delete(stake);
+        await stakeRepository.delete(stake.id);
+        // await batch.delete(stake);
       }
 
-      await batch.commit();
+      // await batch.commit();
     } catch (e) {
       console.log("CLEARING STAKES ERR");
       console.log("CLEARING STAKES");
