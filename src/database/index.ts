@@ -22,11 +22,20 @@ export default class DB {
     const stakes = await stakeRepository.find();
     console.log("CLEARING STAKES");
     console.log(stakes);
-    const batch = stakeRepository.createBatch();
+    try {
+      const batch = stakeRepository.createBatch();
 
-    stakes.forEach((stake) => batch.delete(stake));
+      stakes.forEach((stake) => batch.delete(stake));
 
-    await batch.commit();
+      await batch.commit();
+    } catch (e) {
+      console.log("CLEARING STAKES ERR");
+      console.log("CLEARING STAKES");
+      console.log("CLEARING STAKES");
+      console.log("CLEARING STAKES");
+
+      console.error(e);
+    }
   }
 
   static async getLastReport(): Promise<Date> {
