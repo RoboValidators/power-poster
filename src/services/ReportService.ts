@@ -8,7 +8,6 @@ import publisherService from "./PublisherService";
 import Parser from "../utils/parser";
 import BigNumber from "bignumber.js";
 import PriceService from "./PriceService";
-import LoggerService from "./LoggerService";
 
 export default class ReportService {
   static async check() {
@@ -39,35 +38,16 @@ export default class ReportService {
 
       // Only publish if totatValue > (minimumAmount/4)
       if (PriceService().isTimesGreaterThan(overallTotal, 0.25)) {
-        let blockDTO: BlockDTO;
+        const status = await MessageBuilder.buildAggroMessage(stakeData, lastReport);
+        await publisherService.publishAll(status);
 
-        try {
-          LoggerService.getLogger().error("===========================111");
+        const { data: blockDTO } = await axios.get<BlockDTO>(
+          `http://localhost:4003/api/blocks/last`
+        );
 
-          const status = await MessageBuilder.buildAggroMessage(stakeData, lastReport);
-          LoggerService.getLogger().error("===========================22");
-          await publisherService.publishAll(status);
-
-          LoggerService.getLogger().error("===========================33");
-          const { data } = await axios.get<BlockDTO>(`http://localhost:4003/api/blocks/last`);
-          blockDTO = data;
-          LoggerService.getLogger().error("===========================44");
-        } catch (e) {
-          LoggerService.getLogger().error("===========================");
-          LoggerService.getLogger().error("===========================");
-          LoggerService.getLogger().error("===========================");
-          LoggerService.getLogger().error("===========================");
-          LoggerService.getLogger().error("===========================");
-          LoggerService.getLogger().error("===========================");
-          LoggerService.getLogger().error("===========================");
-          LoggerService.getLogger().error(e);
-        } finally {
-          LoggerService.getLogger().error("===========================DELETE");
-
-          // Set new last published and reset stakes
-          await db.setLastReport(blockDTO?.data?.timestamp?.human || new Date());
-          await db.clearStakes();
-        }
+        // Set new last published and reset stakes
+        await db.setLastReport(blockDTO?.data?.timestamp?.human || new Date());
+        await db.clearStakes();
       }
     }
   }

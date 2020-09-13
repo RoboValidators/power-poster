@@ -20,24 +20,17 @@ export default class DB {
 
   static async clearStakes(): Promise<void> {
     const stakes = await stakeRepository.find();
-    console.log("CLEARING STAKES");
-    console.log(stakes);
-    try {
-      // const batch = stakeRepository.createBatch();
+    const batch = stakeRepository.createBatch();
 
-      for (const stake of stakes) {
-        await stakeRepository.delete(stake.id);
-        // await batch.delete(stake);
+    stakes.forEach((stake) => batch.delete(stake));
+
+    await batch.commit();
+
+    const stakesValidate = await stakeRepository.find();
+    if (stakesValidate.length > 0) {
+      for (const stake of stakesValidate) {
+        stakeRepository.delete(stake.id);
       }
-
-      // await batch.commit();
-    } catch (e) {
-      console.log("CLEARING STAKES ERR");
-      console.log("CLEARING STAKES");
-      console.log("CLEARING STAKES");
-      console.log("CLEARING STAKES");
-
-      console.error(e);
     }
   }
 
