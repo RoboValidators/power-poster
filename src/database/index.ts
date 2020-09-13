@@ -25,7 +25,9 @@ export default class DB {
     try {
       const batch = stakeRepository.createBatch();
 
-      stakes.forEach((stake) => batch.delete(stake));
+      for (const stake of stakes) {
+        await batch.delete(stake);
+      }
 
       await batch.commit();
     } catch (e) {
