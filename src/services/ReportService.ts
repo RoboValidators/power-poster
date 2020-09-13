@@ -8,6 +8,7 @@ import publisherService from "./PublisherService";
 import Parser from "../utils/parser";
 import BigNumber from "bignumber.js";
 import PriceService from "./PriceService";
+import LoggerService from "./LoggerService";
 
 export default class ReportService {
   static async check() {
@@ -38,16 +39,21 @@ export default class ReportService {
 
       // Only publish if totatValue > (minimumAmount/4)
       if (PriceService().isTimesGreaterThan(overallTotal, 0.25)) {
-        const status = await MessageBuilder.buildAggroMessage(stakeData, lastReport);
-        await publisherService.publishAll(status);
+        let blockDTO: BlockDTO;
 
-        const { data: blockDTO } = await axios.get<BlockDTO>(
-          `http://localhost:4003/api/blocks/last`
-        );
+        try {
+          const status = await MessageBuilder.buildAggroMessage(stakeData, lastReport);
+          await publisherService.publishAll(status);
 
-        // Set new last published and reset stakes
-        await db.setLastReport(blockDTO.data.timestamp.human);
-        await db.clearStakes();
+          const { data } = await axios.get<BlockDTO>(`http://localhost:4003/api/blocks/last`);
+          blockDTO = data;
+        } catch (e) {
+          LoggerService.getLogger().error(e);
+        } finally {
+          // Set new last published and reset stakes
+          await db.setLastReport(blockDTO?.data?.timestamp?.human || new Date());
+          await db.clearStakes();
+        }
       }
     }
   }
