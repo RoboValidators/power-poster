@@ -40,7 +40,7 @@
     "bignumber.js": "9.0.0",
     "bull": "3.16.0",
     "firebase": "7.20.0",
-    "firebase-admin": "9.1.1",
+    "firebase-admin": "9.2.0",
     "fireorm": "0.17.0",
     "moment": "2.28.0",
     "node-telegram-bot-api": "0.50.0",
