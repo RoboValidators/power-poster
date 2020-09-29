@@ -31,7 +31,7 @@
     "updates": "../../node_modules/npm-check-updates/bin/npm-check-updates -a"
   },
   "dependencies": {
-    "@arkecosystem/core-container": "2.7.0",
+    "@arkecosystem/core-container": "2.7.1",
     "@arkecosystem/core-interfaces": "2.7.0",
     "@nosplatform/stake-transactions-crypto": "0.2.6",
     "@types/bull": "3.14.0",
