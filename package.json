@@ -60,9 +60,9 @@
     "eslint-plugin-prettier": "3.1.4",
     "jest": "26.2.2",
     "jest-extended": "0.11.5",
-    "npm-check-updates": "9.0.2",
+    "npm-check-updates": "9.0.3",
     "prettier": "2.1.2",
-    "ts-jest": "26.4.0",
+    "ts-jest": "26.4.1",
     "ts-node": "8.10.2",
     "typedoc": "0.19.2",
     "typescript": "3.9.7"
