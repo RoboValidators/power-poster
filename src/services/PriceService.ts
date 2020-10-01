@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from "axios";
 import { setupCache } from "axios-cache-adapter";
 
-import OptionsService from "./OptionsService";
+import OptionsService from "./plugin/OptionsService";
 import { Options } from "../types";
 import Parser from "../utils/parser";
 import BigNumber from "bignumber.js";

@@ -2,7 +2,7 @@ import { EventEmitter } from "@arkecosystem/core-interfaces";
 
 import queue from "./queue";
 import { PowerUp, Events, Options } from "./types";
-import OptionsService from "./services/OptionsService";
+import OptionsService from "./services/plugin/OptionsService";
 
 class Listener {
   setUp(options: Partial<Options>, emitter: EventEmitter.EventEmitter) {

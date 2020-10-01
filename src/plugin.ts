@@ -3,9 +3,10 @@ import { Container, Logger, EventEmitter } from "@arkecosystem/core-interfaces";
 
 import { defaults, alias } from "./defaults";
 import listener from "./listener";
-import Options from "./services/OptionsService";
-import LoggerService from "./services/LoggerService";
+import Options from "./services/plugin/OptionsService";
+import LoggerService from "./services/plugin/LoggerService";
 import pkg from "../package.json";
+import ContainerService from "./services/plugin/ContainerService";
 
 const wall = (text: string) => `============= ${text.toUpperCase()} =============`;
 
@@ -20,6 +21,7 @@ export const plugin: Container.IPluginDescriptor = {
 
     LoggerService.setLogger(logger);
     Options.setOptions(options as any);
+    ContainerService.setContainer(container);
     listener.setUp(options, emitter);
   },
   async deregister(container: Container.IContainer, _) {
