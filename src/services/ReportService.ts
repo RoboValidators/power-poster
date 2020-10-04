@@ -38,6 +38,12 @@ export default class ReportService {
         }
       });
 
+      console.log(
+        "PriceService().isTimesGreaterThan(overallTotal, 3)",
+        PriceService().isTimesGreaterThan(overallTotal, 3)
+      );
+      console.log("overallTotal", overallTotal);
+
       // Only publish if totatValue > (minimumAmount*x)
       if (PriceService().isTimesGreaterThan(overallTotal, 3)) {
         const status = await MessageBuilder.buildAggroMessage(stakeData, lastReport);
