@@ -55,16 +55,6 @@ export interface Options extends Container.IPluginOptions {
   cron: string;
 }
 
-export interface BlockDTO {
-  data: {
-    timestamp: {
-      epoch: number;
-      unix: number;
-      human: Date;
-    };
-  };
-}
-
 export enum Publishers {
   TWITTER = "TWITTER",
   TELEGRAM = "TELEGRAM"
@@ -73,4 +63,10 @@ export enum Publishers {
 export enum Events {
   Cron = "cron",
   PowerUp = "stake.powerup"
+}
+
+export enum Plugins {
+  DATABASE = "database",
+  LOGGER = "logger",
+  EVENT_EMITTER = "event-emitter"
 }

@@ -5,7 +5,7 @@ import { PowerUpJob, Events, CronJob } from "./types";
 import db from "./database";
 import PowerupService from "./services/PowerupService";
 import ReportService from "./services/ReportService";
-import LoggerService from "./services/LoggerService";
+import LoggerService from "./services/plugin/LoggerService";
 import { alias } from "./defaults";
 
 const publishQueue = new Queue<PowerUpJob | CronJob>("publish");

@@ -31,7 +31,7 @@ Don't have a vote? We're always open for $BIND donations to `cU3kVS8sgH4E4hcyaUE
 
 ```javascript
 module.exports = {
-    // AFTER @arkecosystem/core-api & @arkecosystem/core-wallet-api
+    // Any other plugin(s) ..
     "@robovalidators/power-poster": {
         telegram: {
             token: "", // Telegram token (obtained from @BotFather)
@@ -50,7 +50,7 @@ module.exports = {
         currency: "USD", // Token value currency you want to query and post
         cron: "0 18 * * *" // The cron expression used for the accumulative stake reports
     },
-    // Any other plugins ..
+    // Any other plugin(s) ..
 };
 ```
 As a tip, check your expressions here to verify they are correct: [cron expression generator](https://crontab.cronhub.io/)
@@ -87,7 +87,6 @@ ccontrol start relay | forger | core
 
 # If you see ============== POWER-POSTER ==============
 # in your logs during startup, everything is set and done!
-# **NOTE** The log will only appear AFTER syncing due to plugin order
 
 ```
 

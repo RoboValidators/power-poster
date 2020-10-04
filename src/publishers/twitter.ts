@@ -2,8 +2,8 @@ import { Logger } from "@arkecosystem/core-interfaces";
 import Tweeter from "twitter-lite";
 
 import { Publisher, Publishers, Options } from "../types";
-import OptionsService from "../services/OptionsService";
-import LoggerService from "../services/LoggerService";
+import OptionsService from "../services/plugin/OptionsService";
+import LoggerService from "../services/plugin/LoggerService";
 
 export default class Twitter implements Publisher {
   public client: Tweeter;

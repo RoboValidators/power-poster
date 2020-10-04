@@ -1,13 +1,15 @@
-import axios from "axios";
+import BigNumber from "bignumber.js";
+import moment from "moment";
 import { Managers } from "@arkecosystem/crypto";
+import { Database } from "@arkecosystem/core-interfaces";
 
 import db from "../database";
-import { BlockDTO, StakeData } from "../types";
+import { Plugins, StakeData } from "../types";
 import MessageBuilder from "../utils/messageBuilder";
 import publisherService from "./PublisherService";
 import Parser from "../utils/parser";
-import BigNumber from "bignumber.js";
 import PriceService from "./PriceService";
+import ContainerService from "./plugin/ContainerService";
 
 export default class ReportService {
   static async check() {
@@ -41,12 +43,16 @@ export default class ReportService {
         const status = await MessageBuilder.buildAggroMessage(stakeData, lastReport);
         await publisherService.publishAll(status);
 
-        const { data: blockDTO } = await axios.get<BlockDTO>(
-          `http://localhost:4003/api/blocks/last`
+        const dbService = ContainerService.resolve<Database.IDatabaseService>(Plugins.DATABASE);
+        const lastBlock = await dbService.getLastBlock();
+
+        const date = moment(Managers.configManager.getMilestone().epoch).add(
+          lastBlock.data.timestamp,
+          "seconds"
         );
 
         // Set new last published and reset stakes
-        await db.setLastReport(blockDTO?.data?.timestamp?.human || new Date());
+        await db.setLastReport(moment(date).toDate() || new Date());
         await db.clearStakes();
       }
     }

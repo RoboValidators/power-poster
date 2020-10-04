@@ -2,8 +2,8 @@ import { Logger } from "@arkecosystem/core-interfaces";
 import Client from "node-telegram-bot-api";
 
 import { Publisher, Publishers, Options } from "../types";
-import OptionsService from "../services/OptionsService";
-import LoggerService from "../services/LoggerService";
+import OptionsService from "../services/plugin/OptionsService";
+import LoggerService from "../services/plugin/LoggerService";
 
 export default class Telegram implements Publisher {
   public client: Client;

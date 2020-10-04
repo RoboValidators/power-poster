@@ -1,6 +1,6 @@
 import moment from "moment";
 
-import OptionsService from "../services/OptionsService";
+import OptionsService from "../services/plugin/OptionsService";
 import PriceService from "../services/PriceService";
 import { Stake, StakeData } from "../types";
 import Parser from "./parser";
