@@ -40,9 +40,9 @@ export default class ReportService {
 
       console.log(
         "PriceService().isTimesGreaterThan(overallTotal, 3)",
-        PriceService().isTimesGreaterThan(overallTotal, 3)
+        await PriceService().isTimesGreaterThan(overallTotal, 3)
       );
-      console.log("overallTotal", overallTotal);
+      console.log("overallTotal", overallTotal.toString());
 
       // Only publish if totatValue > (minimumAmount*x)
       if (PriceService().isTimesGreaterThan(overallTotal, 3)) {

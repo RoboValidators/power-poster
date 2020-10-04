@@ -55,10 +55,10 @@ class PriceService {
     const minimum = Parser.toBN(this.options.minimumAmount);
     const totalValue = Parser.toBN(await this.getTotalPrice(amount, token));
 
-    console.log("timesGreater - totalValue", totalValue);
-    console.log("timesGreater - minimum", minimum);
-    console.log("timesGreater - times", times);
-    console.log("timesGreater - minimum.times(times)", minimum.times(times));
+    console.log("timesGreater - totalValue", totalValue.toString());
+    console.log("timesGreater - minimum", minimum.toString());
+    console.log("timesGreater - times", times.toString());
+    console.log("timesGreater - minimum.times(times)", minimum.times(times).toString());
 
     return totalValue.isGreaterThan(minimum.times(times));
   }
