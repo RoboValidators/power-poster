@@ -39,7 +39,7 @@ export default class ReportService {
       });
 
       // Only publish if totatValue > (minimumAmount*x)
-      if (PriceService().isTimesGreaterThan(overallTotal, 3)) {
+      if (await PriceService().isTimesGreaterThan(overallTotal, 3)) {
         const status = await MessageBuilder.buildAggroMessage(stakeData, lastReport);
         await publisherService.publishAll(status);
 
