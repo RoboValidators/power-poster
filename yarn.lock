@@ -39,41 +39,6 @@
     awilix "^4.2.2"
     dayjs "^1.8.15"
 
-"@arkecosystem/core-interfaces@^2.6.52":
-  version "2.6.54"
-  resolved "https://registry.yarnpkg.com/@arkecosystem/core-interfaces/-/core-interfaces-2.6.54.tgz#5978e77cae4ed3e31d443e862d4afe49d29399f6"
-  integrity sha512-KbOX9bXO2L3qGbfLCbgtjgVSQVTTfp9yAKPQ9cm8VTh5XNUmS50GkL3D9S6yr6E7F/YJd57h5agCcWFJHhusEg==
-  dependencies:
-    "@arkecosystem/crypto" "^2.6.54"
-    awilix "^4.2.2"
-    dayjs "^1.8.15"
-
-"@arkecosystem/crypto@^2.6.52", "@arkecosystem/crypto@^2.6.54":
-  version "2.6.54"
-  resolved "https://registry.yarnpkg.com/@arkecosystem/crypto/-/crypto-2.6.54.tgz#a08de774735d3fafc8c8aebc482c8514544a8c19"
-  integrity sha512-JZlf9EW+NszpW+ZNzhUy9gDcarnlcPYu36WQCW/nAI3Zmw4vOcn/h3SX4WBFvoo5HvfDY3OcDmhvpA3eX2xfPg==
-  dependencies:
-    "@arkecosystem/utils" "^1.2"
-    "@types/bytebuffer" "^5.0.40"
-    ajv "^6.10.2"
-    ajv-keywords "^3.4.1"
-    bcrypto "^5.2.0"
-    bip32 "^2.0.3"
-    bip39 "^3.0.2"
-    browserify-aes "^1.2.0"
-    bstring "^0.3.9"
-    buffer-xor "^2.0.2"
-    bytebuffer "^5.0.1"
-    dayjs "^1.8.15"
-    deepmerge "^4.0.0"
-    fast-memoize "^2.5.1"
-    ipaddr.js "^1.9.0"
-    lodash.get "^4.4.2"
-    lodash.set "^4.3.2"
-    lodash.sumby "^4.6.0"
-    tiny-glob "^0.2.6"
-    wif "^2.0.6"
-
 "@arkecosystem/crypto@^2.7.1":
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/@arkecosystem/crypto/-/crypto-2.7.1.tgz#4f9066512722fca24a22d7118faafbeda0f5ab16"
@@ -1048,13 +1013,13 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@nosplatform/stake-transactions-crypto@0.2.6":
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/@nosplatform/stake-transactions-crypto/-/stake-transactions-crypto-0.2.6.tgz#7eacd5fdfce0ea8d777e5ea915b80315c11b385b"
-  integrity sha512-pWV7yKzhFZAbneC5KTXlB6RFlbzFWoPuihcYivqAQIMYdHzNneS4bbgi3Pc6H9PId0xmBnIWlEjLV9hP+Io3bQ==
+"@nosplatform/stake-transactions-crypto@0.2.9":
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/@nosplatform/stake-transactions-crypto/-/stake-transactions-crypto-0.2.9.tgz#3c0355e1d70284abdf4a96fd7134070dc491d569"
+  integrity sha512-6esBrhZg9dIBtMCg97y4JSgABHi5CXX4u72YUKaTvHrXEMSb16f7nbRJrCjnsW5VBhEaGvI1aB/5AIYqPK8PRA==
   dependencies:
-    "@arkecosystem/core-interfaces" "^2.6.52"
-    "@arkecosystem/crypto" "^2.6.52"
+    "@arkecosystem/core-interfaces" "^2.7.1"
+    "@arkecosystem/crypto" "^2.7.1"
 
 "@npmcli/ci-detect@^1.0.0":
   version "1.3.0"

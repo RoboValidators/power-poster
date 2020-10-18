@@ -33,7 +33,7 @@
   "dependencies": {
     "@arkecosystem/core-container": "2.7.1",
     "@arkecosystem/core-interfaces": "2.7.1",
-    "@nosplatform/stake-transactions-crypto": "0.2.6",
+    "@nosplatform/stake-transactions-crypto": "0.2.9",
     "@types/bull": "3.14.0",
     "axios": "0.19.2",
     "axios-cache-adapter": "2.5.0",
