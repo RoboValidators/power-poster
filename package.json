@@ -35,7 +35,7 @@
     "@arkecosystem/core-interfaces": "2.7.7",
     "@nosplatform/stake-transactions-crypto": "0.2.9",
     "@types/bull": "3.14.0",
-    "axios": "0.19.2",
+    "axios": "0.21.0",
     "axios-cache-adapter": "2.5.0",
     "bignumber.js": "9.0.1",
     "bull": "3.16.0",
