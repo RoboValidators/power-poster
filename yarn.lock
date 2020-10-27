@@ -1250,10 +1250,10 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
-"@types/bull@3.14.0":
-  version "3.14.0"
-  resolved "https://registry.yarnpkg.com/@types/bull/-/bull-3.14.0.tgz#60741d3f5006bd4e17b02ff036e6ecef7ac47a6e"
-  integrity sha512-9MKWQ4Q+GFIEA3/SdSc128mAccCKni2YVMKPEdQY5qooN+3gl0Po+f7kaKukgn5s6YXj5xbvc/zTaMsHZL9GvA==
+"@types/bull@3.14.4":
+  version "3.14.4"
+  resolved "https://registry.yarnpkg.com/@types/bull/-/bull-3.14.4.tgz#8a787ad4582b1a6cf2bfa6cca5f72428330c455e"
+  integrity sha512-XAYSV6A/r9GX+TgWwjF0WgpKK9/WAiSfVe3q6+2JrRW+3hLDjIU5MQL9HQZet3my98VA3kNWjEYrJCeRmJ5a5w==
   dependencies:
     "@types/ioredis" "*"
 
@@ -2104,21 +2104,21 @@ builtins@^1.0.3:
   resolved "https://registry.yarnpkg.com/builtins/-/builtins-1.0.3.tgz#cb94faeb61c8696451db36534e1422f94f0aee88"
   integrity sha1-y5T662HIaWRR2zZTThQi+U8K7og=
 
-bull@3.16.0:
-  version "3.16.0"
-  resolved "https://registry.yarnpkg.com/bull/-/bull-3.16.0.tgz#adabb8404ebecedfbe4f3b9b2163e249de1915ff"
-  integrity sha512-5RAeKPJwhzuk5y4TL5ys+mX1p1r8TOKUF537c2VFVqg0Z+Y2zL1gXfgk0OAlIhD+9E/q3BgRvN96AxUz6nfBDA==
+bull@3.18.1:
+  version "3.18.1"
+  resolved "https://registry.yarnpkg.com/bull/-/bull-3.18.1.tgz#49eb8fd9844a3dc0a12a851b132e508890763a31"
+  integrity sha512-g3gHFZ0qMo0wpecoNmd2W+F1Gj48l6phVCTdsQPKxDk1bB7kzD0nY5FAFnBFiaWxNmh5lb5X9TMB64uNXFKFDg==
   dependencies:
     cron-parser "^2.13.0"
     debuglog "^1.0.0"
     get-port "^5.1.1"
     ioredis "^4.14.1"
-    lodash "^4.17.15"
+    lodash "^4.17.19"
     p-timeout "^3.2.0"
     promise.prototype.finally "^3.1.2"
-    semver "^6.3.0"
+    semver "^7.3.2"
     util.promisify "^1.0.1"
-    uuid "^8.2.0"
+    uuid "^8.3.0"
 
 bytebuffer@^5.0.1:
   version "5.0.1"
@@ -7886,7 +7886,7 @@ uuid@^3.3.2:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
-uuid@^8.0.0, uuid@^8.2.0, uuid@^8.3.0:
+uuid@^8.0.0, uuid@^8.3.0:
   version "8.3.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.0.tgz#ab738085ca22dc9a8c92725e459b1d507df5d6ea"
   integrity sha512-fX6Z5o4m6XsXBdli9g7DtWgAx+osMsRRZFKma1mIUsLCz6vRvv+pz5VNbyu9UEDzpMWulZfvpgb/cmDXVulYFQ==
