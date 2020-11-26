@@ -38,7 +38,7 @@
     "axios": "0.21.0",
     "axios-cache-adapter": "2.5.0",
     "bignumber.js": "9.0.1",
-    "bull": "3.19.1",
+    "bull": "3.20.0",
     "firebase": "7.24.0",
     "firebase-admin": "9.4.1",
     "fireorm": "0.17.2",
