@@ -34,7 +34,7 @@ class PriceService {
     return PriceService.instance;
   }
 
-  public async getPrice(token = this.options.token): Promise<number> {
+  public async getPrice(token = this.options.tokenId): Promise<number> {
     const response = await this.client.get("simple/price", {
       params: {
         ids: token,

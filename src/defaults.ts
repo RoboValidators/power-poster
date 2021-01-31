@@ -13,6 +13,7 @@ export const defaults = {
   startHeight: 0,
   txUrl: "https://bindscan.io/transactions",
   token: "BIND",
+  tokenId: "wBIND",
   currency: "USD",
   cron: "0 18 * * *"
 };

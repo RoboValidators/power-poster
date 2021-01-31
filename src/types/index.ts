@@ -51,6 +51,7 @@ export interface Options extends Container.IPluginOptions {
   startHeight: number;
   txUrl: string;
   token: string;
+  tokenId: string;
   currency: string;
   cron: string;
 }
