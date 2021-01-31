@@ -4,6 +4,7 @@
   "semanticCommits": true,
   "statusCheckVerify": true,
   "automergeType": "branch",
+  "ignoreDeps": ["@types/jest", "jest", "jest-extended", "ts-jest", "fireorm"],
   "packageRules": [
     {
       "packagePatterns": ["*"],
