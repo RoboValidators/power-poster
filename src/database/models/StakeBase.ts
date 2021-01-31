@@ -5,7 +5,7 @@ import { StakeTimestamps, Stake } from "../../types";
 export default class StakeModel implements Stake {
   id: string;
   senderPublicKey?: string;
-  status: "grace" | "canceled" | "active" | "released" | "redeemed";
+  status: "grace" | "canceled" | "active" | "released" | "redeemed" | "redeeming";
   timestamps: StakeTimestamps;
   duration: number;
   amount: Utils.BigNumber;
