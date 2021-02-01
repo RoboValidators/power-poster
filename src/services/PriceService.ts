@@ -34,26 +34,26 @@ class PriceService {
     return PriceService.instance;
   }
 
-  public async getPrice(token = this.options.tokenId): Promise<number> {
+  public async getPrice(tokenId = this.options.tokenId): Promise<number> {
     const response = await this.client.get("simple/price", {
       params: {
-        ids: token,
+        ids: tokenId,
         vs_currencies: this.options.currency
       }
     });
 
-    return response.data[token.toLowerCase()][this.options.currency.toLowerCase()];
+    return response.data[tokenId.toLowerCase()][this.options.currency.toLowerCase()];
   }
 
-  public async getTotalPrice(amount: BigNumber, token = this.options.token) {
-    const price = await this.getPrice(token);
+  public async getTotalPrice(amount: BigNumber, tokenId = this.options.tokenId) {
+    const price = await this.getPrice(tokenId);
 
     return amount.times(price).toFixed(2);
   }
 
-  public async isTimesGreaterThan(amount: BigNumber, times = 1, token = this.options.token) {
+  public async isTimesGreaterThan(amount: BigNumber, times = 1, tokenId = this.options.tokenId) {
     const minimum = Parser.toBN(this.options.minimumAmount);
-    const totalValue = Parser.toBN(await this.getTotalPrice(amount, token));
+    const totalValue = Parser.toBN(await this.getTotalPrice(amount, tokenId));
 
     return totalValue.isGreaterThan(minimum.times(times));
   }
