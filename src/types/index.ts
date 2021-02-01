@@ -6,12 +6,7 @@ import BigNumber from "bignumber.js";
 export type Stake = StakeInterfaces.IStakeObject;
 export type Block = Interfaces.IBlockData;
 export type ParserType = Utils.BigNumber | BigNumber | string | number;
-export type StakeTimestamps = {
-  created: number;
-  graceEnd: number;
-  powerUp: number;
-  redeemable: number;
-};
+export type StakeTimestamps = StakeInterfaces.IStakeTimestamps;
 
 export type StakeData = {
   stakeLevel: string;
@@ -51,6 +46,7 @@ export interface Options extends Container.IPluginOptions {
   startHeight: number;
   txUrl: string;
   token: string;
+  tokenId: string;
   currency: string;
   cron: string;
 }
