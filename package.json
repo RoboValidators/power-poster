@@ -65,7 +65,7 @@
     "ts-jest": "25.0.0",
     "ts-node": "8.10.2",
     "typedoc": "0.20.23",
-    "typescript": "3.9.7"
+    "typescript": "3.9.9"
   },
   "jest": {
     "preset": "../../jest-preset.json"
