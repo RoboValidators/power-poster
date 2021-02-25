@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@arkecosystem/core-container": "2.7.25",
-    "@arkecosystem/core-interfaces": "2.7.24",
+    "@arkecosystem/core-interfaces": "2.7.25",
     "@nosplatform/stake-transactions-crypto": "0.5.0",
     "@types/bull": "3.15.0",
     "axios": "0.21.1",

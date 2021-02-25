@@ -30,21 +30,21 @@
   resolved "https://registry.yarnpkg.com/@arkecosystem/core-event-emitter/-/core-event-emitter-2.7.25.tgz#85c4779eac342dde4c22ec48f1b93806f5dcd6ff"
   integrity sha512-yG05lro/v9NueJxqo9xC8UFcSw/eCDIwYebA1J+he7ZdZYk4ojbXEWWVDRmoG+ygY6fhie42mqjVXvOaoNa9fQ==
 
-"@arkecosystem/core-interfaces@2.7.24", "@arkecosystem/core-interfaces@^2.7.24":
-  version "2.7.24"
-  resolved "https://registry.yarnpkg.com/@arkecosystem/core-interfaces/-/core-interfaces-2.7.24.tgz#3ab54a2cdd16ba144ed83c503af657784620f5cd"
-  integrity sha512-g+E258+23f6YsnOdgZ8jfOJ+nC3HkRseB1lXwUZhXqhhmzJuEYttna91mVNqvbH8ro0I3aRuSppnPuFbDJWgew==
-  dependencies:
-    "@arkecosystem/crypto" "^2.7.24"
-    awilix "^4.2.2"
-    dayjs "^1.8.15"
-
-"@arkecosystem/core-interfaces@^2.7.25":
+"@arkecosystem/core-interfaces@2.7.25", "@arkecosystem/core-interfaces@^2.7.25":
   version "2.7.25"
   resolved "https://registry.yarnpkg.com/@arkecosystem/core-interfaces/-/core-interfaces-2.7.25.tgz#7742dd99c20ef5c6c55a2b980d0a528785a31869"
   integrity sha512-i3emyVRMeb5gsE4ze4kwB/+fIyAHjD+QGl7l+lexU2ZpTEyo+A7wCt0Wq/EGUA9TXVqdc60feb8XeItlhefJ0A==
   dependencies:
     "@arkecosystem/crypto" "^2.7.25"
+    awilix "^4.2.2"
+    dayjs "^1.8.15"
+
+"@arkecosystem/core-interfaces@^2.7.24":
+  version "2.7.24"
+  resolved "https://registry.yarnpkg.com/@arkecosystem/core-interfaces/-/core-interfaces-2.7.24.tgz#3ab54a2cdd16ba144ed83c503af657784620f5cd"
+  integrity sha512-g+E258+23f6YsnOdgZ8jfOJ+nC3HkRseB1lXwUZhXqhhmzJuEYttna91mVNqvbH8ro0I3aRuSppnPuFbDJWgew==
+  dependencies:
+    "@arkecosystem/crypto" "^2.7.24"
     awilix "^4.2.2"
     dayjs "^1.8.15"
 
