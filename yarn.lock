@@ -1783,10 +1783,10 @@ aws4@^1.8.0:
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.10.1.tgz#e1e82e4f3e999e2cfd61b161280d16a111f86428"
   integrity sha512-zg7Hz2k5lI8kb7U32998pRRFin7zJlkfezGJjUc2heaD4Pw2wObakCDVzkKztTm/Ln7eiVvYsjqak0Ed4LkMDA==
 
-axios-cache-adapter@2.7.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/axios-cache-adapter/-/axios-cache-adapter-2.7.0.tgz#3da2871840634457cd449d485a781aecc630a035"
-  integrity sha512-itggIo9i8tnsBFnniNh8+7RxXfdCKZT+cEvyjzBdU8IIyudpj4WyrY7288KE8MICs6+u7YFRVlLZi3vvXufz8w==
+axios-cache-adapter@2.7.3:
+  version "2.7.3"
+  resolved "https://registry.yarnpkg.com/axios-cache-adapter/-/axios-cache-adapter-2.7.3.tgz#0d1eefa0f25b88f42a95c7528d7345bde688181d"
+  integrity sha512-A+ZKJ9lhpjthOEp4Z3QR/a9xC4du1ALaAsejgRGrH9ef6kSDxdFrhRpulqsh9khsEnwXxGfgpUuDp1YXMNMEiQ==
   dependencies:
     cache-control-esm "1.0.0"
     md5 "^2.2.1"
