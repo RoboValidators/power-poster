@@ -5940,10 +5940,10 @@ npm-bundled@^1.1.1:
   dependencies:
     npm-normalize-package-bin "^1.0.1"
 
-npm-check-updates@11.1.10:
-  version "11.1.10"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-11.1.10.tgz#16d26ada331546e15c918f5181a323dd6d5a9dc2"
-  integrity sha512-T8o/3ls74Q8i3LbO9jjxI1YWA9ioJjjAnYt9BezbFn/D99STc+7pe633H0gLmNi4/5b1Xi3nlbI6UCbc6eb/pQ==
+npm-check-updates@11.2.1:
+  version "11.2.1"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-11.2.1.tgz#db4aece57be303b1f1f100595a12c3e7b09ed7d2"
+  integrity sha512-OtFXtxHhqU+W+WF5UvurK5nstX/30Q6NCT3ti19zbox6wpFMoHY59YGhbyw00Rozg1egXfeNG3fT6Kh6D+tpgQ==
   dependencies:
     chalk "^4.1.0"
     cint "^8.2.1"
@@ -5959,6 +5959,7 @@ npm-check-updates@11.1.10:
     libnpmconfig "^1.2.1"
     lodash "^4.17.21"
     mem "^8.0.0"
+    minimatch "^3.0.4"
     p-map "^4.0.0"
     pacote "^11.2.7"
     parse-github-url "^1.0.2"
