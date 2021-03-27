@@ -45,7 +45,7 @@ module.exports = {
         },
         minimumAmount: 0, // Minimum amount of USD to announce as a "whale"-post
         startHeight: 0, // Heigh to start the announcements from
-        txUrl: "https://bindscan.io/transactions", // API endpoint for transactions
+        txUrl: "https://bindscan.io/transaction", // API endpoint for transaction
         token: "BIND", // Token you want to use (used in price API call)
         currency: "USD", // Token value currency you want to query and post
         cron: "0 18 * * *" // The cron expression used for the accumulative stake reports

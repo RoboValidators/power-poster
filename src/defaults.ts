@@ -11,7 +11,7 @@ export const defaults = {
   },
   minimumAmount: 0,
   startHeight: 0,
-  txUrl: "https://bindscan.io/transactions",
+  txUrl: "https://bindscan.io/transaction",
   token: "BIND",
   tokenId: "wrapped-bind",
   currency: "USD",
