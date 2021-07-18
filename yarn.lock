@@ -2196,10 +2196,10 @@ builtins@^1.0.3:
   resolved "https://registry.yarnpkg.com/builtins/-/builtins-1.0.3.tgz#cb94faeb61c8696451db36534e1422f94f0aee88"
   integrity sha1-y5T662HIaWRR2zZTThQi+U8K7og=
 
-bull@3.25.0:
-  version "3.25.0"
-  resolved "https://registry.yarnpkg.com/bull/-/bull-3.25.0.tgz#d80e690e7bed84016fc4f83633c5dcac0255032a"
-  integrity sha512-11g4x/1skDW5gt0AE/7hOQ+Hhyfo29CPymO9yGvgGrEa5WlTY9nvmJdRE4XfGMj2dgUNuTTQuNJYrTzyiOiyLg==
+bull@3.26.0:
+  version "3.26.0"
+  resolved "https://registry.yarnpkg.com/bull/-/bull-3.26.0.tgz#c6198cf4f3a2fa5f3044cbe462b452c77a3df94f"
+  integrity sha512-W1ohwMBApLW9dhKHEwgzr8YnpScTOGC9KtKP2DrvjnWTQFWbaEnKlrDHKp3SJwvAB0C3jDsO579O/Hys/UmAiQ==
   dependencies:
     cron-parser "^2.13.0"
     debuglog "^1.0.0"
