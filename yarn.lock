@@ -30,12 +30,12 @@
   resolved "https://registry.yarnpkg.com/@arkecosystem/core-event-emitter/-/core-event-emitter-2.7.26.tgz#288c9379fbf1762ae4e71b8da75567af14eeb5b1"
   integrity sha512-XLOFJnDwNdh3yY7CXgM2pNXRHlQDtHC2mzNdV3ukj2XPkA0Sz7MvQBC1Ec4+vf0tkiDRe3g00Bs28XeCNUa5jQ==
 
-"@arkecosystem/core-interfaces@2.7.25":
-  version "2.7.25"
-  resolved "https://registry.yarnpkg.com/@arkecosystem/core-interfaces/-/core-interfaces-2.7.25.tgz#7742dd99c20ef5c6c55a2b980d0a528785a31869"
-  integrity sha512-i3emyVRMeb5gsE4ze4kwB/+fIyAHjD+QGl7l+lexU2ZpTEyo+A7wCt0Wq/EGUA9TXVqdc60feb8XeItlhefJ0A==
+"@arkecosystem/core-interfaces@2.7.26", "@arkecosystem/core-interfaces@^2.7.26":
+  version "2.7.26"
+  resolved "https://registry.yarnpkg.com/@arkecosystem/core-interfaces/-/core-interfaces-2.7.26.tgz#53333776991621193af1690bf4a4b832bf025b69"
+  integrity sha512-IU8b+Jkwt8hzsztVHyNLBTCuITwROvFlvozgOys+lThcBQF3UbI6ai4F1WuVDJk0nZuOysKBhTDubfvN2PfLVA==
   dependencies:
-    "@arkecosystem/crypto" "^2.7.25"
+    "@arkecosystem/crypto" "^2.7.26"
     awilix "^4.2.2"
     dayjs "^1.8.15"
 
@@ -48,45 +48,10 @@
     awilix "^4.2.2"
     dayjs "^1.8.15"
 
-"@arkecosystem/core-interfaces@^2.7.26":
-  version "2.7.26"
-  resolved "https://registry.yarnpkg.com/@arkecosystem/core-interfaces/-/core-interfaces-2.7.26.tgz#53333776991621193af1690bf4a4b832bf025b69"
-  integrity sha512-IU8b+Jkwt8hzsztVHyNLBTCuITwROvFlvozgOys+lThcBQF3UbI6ai4F1WuVDJk0nZuOysKBhTDubfvN2PfLVA==
-  dependencies:
-    "@arkecosystem/crypto" "^2.7.26"
-    awilix "^4.2.2"
-    dayjs "^1.8.15"
-
 "@arkecosystem/crypto@^2.7.24":
   version "2.7.24"
   resolved "https://registry.yarnpkg.com/@arkecosystem/crypto/-/crypto-2.7.24.tgz#7e2bfd6374f057ba86cc136e335cbb6f1b342456"
   integrity sha512-jGtscWk04hvoqXOkWdh3CgNFZNQBAXHLkrQOPqLw410yL218EtdBthxf+9+us2JnzoP7crfMa95bsL61aCzEVQ==
-  dependencies:
-    "@arkecosystem/utils" "^1.2"
-    "@types/bytebuffer" "^5.0.40"
-    ajv "^6.10.2"
-    ajv-keywords "^3.4.1"
-    bcrypto "^5.2.0"
-    bip32 "^2.0.3"
-    bip39 "^3.0.2"
-    browserify-aes "^1.2.0"
-    bstring "^0.3.9"
-    buffer-xor "^2.0.2"
-    bytebuffer "^5.0.1"
-    dayjs "^1.8.15"
-    deepmerge "^4.0.0"
-    fast-memoize "^2.5.1"
-    ipaddr.js "^1.9.0"
-    lodash.get "^4.4.2"
-    lodash.set "^4.3.2"
-    lodash.sumby "^4.6.0"
-    tiny-glob "^0.2.6"
-    wif "^2.0.6"
-
-"@arkecosystem/crypto@^2.7.25":
-  version "2.7.25"
-  resolved "https://registry.yarnpkg.com/@arkecosystem/crypto/-/crypto-2.7.25.tgz#9ca9b71f02d56027c0d99eb668349058ff07f2ed"
-  integrity sha512-hcTN5EUEnlfAO1PdFnysMPTLCBp4IdQZ0MSI9HweByK/dDZpFbVwh0Xc+Z3yhRimDN5ASB6lfxNdlZAKNhQVQA==
   dependencies:
     "@arkecosystem/utils" "^1.2"
     "@types/bytebuffer" "^5.0.40"
