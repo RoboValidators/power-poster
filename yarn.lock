@@ -6098,10 +6098,10 @@ node-notifier@^6.0.0:
     shellwords "^0.1.1"
     which "^1.3.1"
 
-node-telegram-bot-api@0.61.0:
-  version "0.61.0"
-  resolved "https://registry.yarnpkg.com/node-telegram-bot-api/-/node-telegram-bot-api-0.61.0.tgz#e5d10e219e4d3e8d347dbafd0ded0262409cf4cf"
-  integrity sha512-BZXd8Bh2C5+uBEQuuI3FD7TFJF3alV+6oFQt8CNLx3ldX/hsd+NYyllTX+Y+5X0tG+xtcRQQjbfLgz/4sRvmBQ==
+node-telegram-bot-api@0.63.0:
+  version "0.63.0"
+  resolved "https://registry.yarnpkg.com/node-telegram-bot-api/-/node-telegram-bot-api-0.63.0.tgz#efb0a496990e30cb490df8e9d3c069fc3bfe1a37"
+  integrity sha512-SssDLHZ+Qi7Ygwt2iKur2BBZUjRBBDxC98+ydyVZo/arUJlXz3nA6dUEYP3pjNLWW4qQJdf7OsptaUDrKTTHlg==
   dependencies:
     array.prototype.findindex "^2.0.2"
     bl "^1.2.3"
