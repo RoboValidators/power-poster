@@ -42,7 +42,7 @@
     "firebase": "7.24.0",
     "firebase-admin": "9.12.0",
     "fireorm": "0.17.2",
-    "moment": "2.29.4",
+    "moment": "2.30.1",
     "node-telegram-bot-api": "0.63.0",
     "reflect-metadata": "0.1.13",
     "twitter-lite": "0.14.0"
