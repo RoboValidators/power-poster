@@ -44,7 +44,7 @@
     "fireorm": "0.17.2",
     "moment": "2.30.1",
     "node-telegram-bot-api": "0.64.0",
-    "reflect-metadata": "0.1.13",
+    "reflect-metadata": "0.2.1",
     "twitter-lite": "0.14.0"
   },
   "devDependencies": {
