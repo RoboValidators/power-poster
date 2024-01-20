@@ -63,7 +63,7 @@
     "npm-check-updates": "11.8.5",
     "prettier": "2.8.8",
     "ts-jest": "25.0.0",
-    "ts-node": "8.10.2",
+    "ts-node": "10.9.2",
     "typedoc": "0.22.10",
     "typescript": "3.9.10"
   },
